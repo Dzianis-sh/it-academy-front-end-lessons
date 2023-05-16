@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table-version</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .text-bold {
+      font-weight: 600;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    .header-title,
+    .footer-title {
+      text-align: center;
+      color: blue;
+      font-size: 30px;
+      background-color: lightblue;
+      text-transform: uppercase;
+    }
+
+    .second-row {
+      vertical-align: top;
+    }
+
+    .header-title {
+      padding: 15px 0;
+    }
+
+    .footer-title {
+      padding: 23px 0;
+    }
+
+    .sidebar {
+      width: 200px;
+      padding: 30px 0;
+      background-color: rgba(207, 207, 84, 0.834);
+    }
+
+    .sidebar__title {
+      margin-bottom: 20px;
+      font-size: 20px;
+      padding: 0 10px;
+    }
+
+    .sidebar__menu {
+      padding: 0 30px;
+    }
+
+    .content {
+      text-align: justify;
+      padding: 20px;
+      background: url('img/ball.png') top right repeat-y;
+    }
+
+
+    /* [.content p:first-child и .content p:nth-child(1) {
+      margin-bottom: 20px;] - не срабатывает.
+      А last-child работает.
+    } */
+
+    .content p {
+      margin-bottom: 20px;
+    }
+
+    .content p:last-child {
+      margin: 0;
+    }
+
+    .content__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .content__img {
+      float: left;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td class="header-title" colspan="2">Привет участникам соревнований!</td>
+    </tr>
+    <tr class="second-row">
+      <td class="sidebar">
+        <h2 class="sidebar__title">Виды спорта:</h2>
+        <ul class="sidebar__menu">
+          <li><a href="#">футбол</a></li>
+          <li><a href="#">карате</a></li>
+          <li><a href="#">плавание</a></li>
+          <li><a href="#">баскетбол</a></li>
+          <li><a href="#">стрельба из лука</a></li>
+          <li><a href="#">биатлон</a></li>
+          <li><a href="#">баскетбол</a></li>
+          <li><a href="#">плавание</a></li>
+          <li><a href="#">настольный теннис</a></li>
+          <li><a href="#">плавание</a></li>
+          <li><a href="#">стрельба из лука</a></li>
+          <li><a href="#">биатлон</a></li>
+          <li><a href="#">плавание</a></li>
+          <li><a href="#">баскетбол</a></li>
+          <li><a href="#">бокс</a></li>
+          <li><a href="#">плавание</a></li>
+          <li><a href="#">шашки</a></li>
+          <li><a href="#">биатлон</a></li>
+          <li><a href="#">стрельба из лука</a></li>
+          <li><a href="#">шахматы</a></li>
+          <li><a href="#">бокс</a></li>
+          <li><a href="#">биатлон</a></li>
+          <li><a href="#">стрельба из лука</a></li>
+          <li><a href="#">шахматы</a></li>
+          <li><a href="#">бокс</a></li>
+          <li><a href="#">карате</a></li>
+        </ul>
+      </td>
+      <td class="content">
+        <h1 class="content__title">ФУТБОЛ</h1>
+        <img class="content__img" src="img/football.jpg" width="200" height="133" alt="pic">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Tincidunt vitae semper quis lectus nulla at. Aliquet enim tortor at auctor urna. Donec massa
+          sapien faucibus et molestie ac feugiat sed. Elementum nibh tellus molestie nunc non blandit massa enim.
+          Aliquam sem et tortor consequat id porta nibh venenatis. Sapien pellentesque habitant morbi tristique senectus
+          et netus et. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Nunc eget
+          lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae. Id interdum velit laoreet id donec ultrices
+          tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas pretium aenean.
+        </p>
+        <p>Aliquet enim tortor at auctor urna. Donec massa sapien faucibus et molestie ac feugiat sed. Elementum nibh
+          tellus molestie nunc non blandit massa enim. Aliquam sem et tortor consequat id porta nibh venenatis. Sapien
+          pellentesque habitant morbi tristique senectus et netus et. Lectus vestibulum mattis ullamcorper velit sed
+          ullamcorper morbi tincidunt ornare. Nunc eget lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae.
+          Id interdum velit laoreet id donec ultrices tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas
+          pretium aenean. Enim diam vulputate ut pharetra sit.Lectus vestibulum mattis ullamcorper velit sed ullamcorper
+          morbi tincidunt ornare. Nunc eget
+          lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae. Id interdum velit laoreet id donec ultrices
+          tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas pretium aenean.</p>
+        <p>Orci ac auctor augue mauris augue neque. Ac turpis egestas sed tempus urna et pharetra. Eget lorem dolor sed
+          viverra ipsum nunc aliquet bibendum. Enim diam vulputate ut pharetra sit.Lectus vestibulum mattis ullamcorper
+          velit sed ullamcorper
+          morbi tincidunt ornare. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Mi eget mauris
+          pharetra et ultrices neque ornare aenean. Erat nam at lectus urna duis convallis. Sem fringilla ut morbi
+          tincidunt augue interdum.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer-title" colspan="2">Главное не победа, а участие!</td>
+    </tr>
+  </table>
+</body>
+
+</html>

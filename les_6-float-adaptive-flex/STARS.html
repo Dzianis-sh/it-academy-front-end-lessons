@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6d</title>
+  <style>
+    ul,
+    li {
+      list-style: none;
+    }
+
+    .stars {
+      display: inline-flex;
+      flex-direction: row-reverse;
+    }
+
+    .stars li {
+      cursor: pointer;
+      display: block;
+      background: url('./star0.png');
+      background-repeat: no-repeat;
+      width: 75px;
+      height: 78px;
+    }
+
+    .stars li:hover,
+    .stars li:hover~li {
+      background-position: 0 -100px;
+    }
+
+    .stars img {
+      position: relative;
+      /* z-index: -1; */
+    }
+
+    .stars li:hover,
+    .stars li:hover~img {
+      z-index: 1;
+    }
+
+    /* ul,
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .stars {
+      max-width: fit-content;
+    }
+
+    .stars img:hover,
+    .stars img:hover~.stars img {}
+
+    li:hover,
+    li:hover~li {
+      cursor: pointer;
+      background-image: url('./star1.png');
+      background-position: top left;
+      background-repeat: no-repeat;
+    } */
+    /* .stars {
+      display: inline-flex;
+      flex-direction: row-reverse;
+    }
+
+    .stars li {
+      cursor: pointer;
+      display: inline-block;
+      background: url('./star0.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 75px;
+      height: 78px;
+    }
+
+    .stars li:hover,
+    .stars li:hover~li {
+      background: none;
+    }
+
+    .stars span:hover,
+    .stars span:hover~span {
+      background: url('./star1.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      opacity: 1;
+    } */
+  </style>
+
+</head>
+
+<body>
+  <ul class="stars">
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+
+  </ul>
+
+
+</body>
+
+</html>

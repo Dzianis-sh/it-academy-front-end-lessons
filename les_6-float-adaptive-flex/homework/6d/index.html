@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6d</title>
+  <style>
+    html,
+    body {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    .stars {
+      display: inline-flex;
+      flex-direction: row-reverse;
+    }
+
+    .stars li {
+      cursor: pointer;
+      background: url('./star0.png');
+      background-repeat: no-repeat;
+    }
+
+    .stars li:hover,
+    .stars li:hover~li {
+      /* background-position: 0 -100px; */
+      background: none;
+    }
+
+    .stars img {
+      position: relative;
+      z-index: -1;
+    }
+
+    .stars li:hover,
+    .stars li:hover~img {
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="stars">
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+    <li><img src="star1.png" alt="pic"></li>
+  </ul>
+
+</body>
+
+</html>

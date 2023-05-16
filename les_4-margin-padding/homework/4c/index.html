@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4c</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    th,
+    td {
+      padding: 15px 20px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    table {
+      color: #d6d6d6;
+      border-collapse: collapse;
+    }
+
+    td {
+      background-color: #293034;
+      border: 2px solid #45454557;
+    }
+
+    .titles-bg {
+      background-color: #32353f;
+    }
+
+    .table-result {
+      text-align: right;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <tr class="titles-bg">
+          <th class="text-left">Сотрудник</th>
+          <th>Зарплата</th>
+          <th>Бонусы</th>
+          <th class="text-left">Менеджер</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Алескей Примадонин</td>
+          <td>750$</td>
+          <td>63$</td>
+          <td rowspan="2">Кодовенок Хекслетович</td>
+        </tr>
+        <tr>
+          <td>Вениамин Редакторович</td>
+          <td>1200$</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Джедай Подаванов</td>
+          <td>500$</td>
+          <td>100$</td>
+          <td>Королева Верстальщина</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="table-result" colspan="4">Всего: 2613$</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+
+</html>

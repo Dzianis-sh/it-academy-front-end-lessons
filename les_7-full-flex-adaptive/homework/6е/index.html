@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6e</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a:hover {
+      color: rgb(118, 154, 254);
+    }
+
+    html,
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100%;
+    }
+
+    body {
+      background: linear-gradient(#052433 0%, #0b5174 100%) no-repeat;
+    }
+
+    .container {
+      line-height: 2;
+      max-width: 750px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      margin: 60px auto;
+      padding: 15px 40px;
+    }
+
+    .word-code-style {
+      font-family: 'Courier New', monospace;
+      background: rgba(240, 240, 235, .5);
+    }
+
+    .text-div-color {
+      color: #268bd2;
+    }
+
+    .text-attr-color {
+      color: #2aa198;
+    }
+
+    .p-article {
+      margin-bottom: 30px;
+    }
+
+    .example-block {
+      background-color: rgba(240, 240, 235, .5);
+      color: #93a1a1;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Быстрый старт</h1>
+    <h2>Введение</h2>
+    <p class="p-article">БЭМ (Блок, Элемент, Модификатор) — компонентный подход к веб-разработке. В его
+      основе лежит принцип разделения
+      интерфейса на независимые блоки. Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно
+      использовать существующий код, избегая «Copy-Paste».</p>
+    <h2>Содержание</h2>
+    <nav>
+      <ul class=" nav-menu">
+        <li><a href="#block">Блок</a></li>
+        <li><a href="#element">Элемент</a></li>
+        <li><a href="#when-block-element">Когда создавать блок, когда — элемент?</a></li>
+        <li><a href="#modificator">Модификатор</a></li>
+        <li><a href="#mix">Микс</a></li>
+        <li><a href="#file-structure">Файловая структура</a></li>
+      </ul>
+    </nav>
+    <h2 id="block">Блок</h2>
+    <p class="p-article">Функционально независимый компонент страницы, который может быть повторно использован. В HTML
+      блоки представлены
+      атрибутом <span class="word-code-style">class</span>.</p>
+    <p>Особенности:</p>
+    <ul>
+      <li><a href="#">Название блока</a> характеризует смысл («что это?» — «меню»: <span
+          class="word-code-style">menu</span>, «кнопка»:
+        <span class="word-code-style">button</span>), а не
+        состояние («какой,
+        как выглядит?» — «красный»: <span class="word-code-style">red</span>, «большой»: <span
+          class="word-code-style">big</span>).
+      </li>
+    </ul>
+    <p>Пример</p>
+    <pre class="example-block">
+
+      <span>&lt;&excl;&minus;&minus; Верно. Семантически осмысленный блок `error`&minus;&minus;&gt;</span>
+      <span>&lt;<span class="text-div-color">div</span>&gt; class=<span
+          class="text-attr-color">"error"</span>&gt;&lt;/<span class="text-div-color">div</span>&gt;</span>
+
+      <span>&lt;&excl;&minus;&minus; Неверно. Описывается внешний вид &minus;&minus;&gt;</span>
+      <span>&lt;<span class="text-div-color">div</span> class=<span
+          class="text-attr-color">"red-text"</span>&gt;&lt;/<span class="text-div-color">div</span>&gt;</span>
+    </pre>
+    <ul>
+      <li>Блок не должен влиять на свое окружение, т. е. блоку не следует задавать внешнюю геометрию (в виде отступов,
+        границ, влияющих на размеры) и позиционирование.</li>
+      <li>В CSS по БЭМ также не рекомендуется использовать селекторы по тегам или <span
+          class="word-code-style">id</span>.</li>
+    </ul>
+    <p class="p-article">Таким образом обеспечивается независимость, при которой возможно повторное использование или
+      перенос блоков с места на место.</p>
+    <h3>Принцип работы с блоками</h3>
+    <h4>Вложенность</h4>
+    <ul>
+      <li>Блоки можно вкладывать друг в друга.</li>
+      <li>Допустима любая вложенность блоков.</li>
+    </ul>
+    <p>Пример</p>
+    <pre class="example-block">
+
+      <span>&lt;&excl;&minus;&minus; Блок `header`&minus;&minus;&gt;</span>
+      <span>&lt;<span class="text-div-color">header</span>&gt; class=<span
+          class="text-attr-color">"header"</span>&gt;&lt;/<span class="text-div-color">div</span>&gt;</span>
+          &lt;&excl;&minus;&minus; Вложенный блок `logo` &minus;&minus;&gt;
+          <span>&lt;<span class="text-div-color">div</span>&gt; class=<span
+          class="text-attr-color">"logo"</span>&gt;&lt;/<span class="text-div-color">div</span>&gt;</span>
+         
+          <span>&lt;&excl;&minus;&minus; Вложенный блок `search-form` &minus;&minus;&gt;</span>
+          <span>&lt;<span class="text-div-color">form</span> class=<span
+          class="text-attr-color">"search-form"</span>&gt;&lt;/<span class="text-div-color">div</span>&gt;</span>
+      &lt;/<span class="text-div-color">header&gt;</span>
+    </pre>
+  </div>
+</body>
+
+</html>

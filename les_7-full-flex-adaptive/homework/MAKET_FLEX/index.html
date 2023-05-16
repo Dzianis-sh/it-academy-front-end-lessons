@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAKET_FLEX</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header,
+    footer {
+      text-align: center;
+      color: blue;
+      background-color: rgb(87, 186, 225);
+      padding: 25px;
+      text-transform: uppercase;
+      font-size: 25px;
+      flex: 0 1 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .burger-menu {
+      display: none;
+    }
+
+    .burger-menu__item {
+      display: block;
+      width: 30px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: rgb(44, 76, 95);
+    }
+
+    .burger-menu__item:first-child {
+      width: 15px;
+    }
+
+    .burger-menu__item:nth-child(2) {
+      width: 25px;
+    }
+
+    main {
+      width: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      background: url('img/ball.png') top right repeat-y;
+    }
+
+    .menu {
+      padding: 15px;
+      background-color: antiquewhite;
+      flex: 0 1 250px;
+    }
+
+    .content {
+      padding: 15px 55px 15px 15px;
+      flex: 1 1;
+      text-align: justify;
+    }
+
+    .menu__list {
+      padding: 0 15px;
+    }
+
+    .menu__title {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .football-cup {
+      margin-right: 20px;
+      float: left;
+    }
+
+    .content__description p {
+      margin-bottom: 20px;
+    }
+
+    .content__description p:last-child {
+      margin: 0;
+    }
+
+    @media (max-width:1024px) {
+      h1 {
+        margin-bottom: 14px;
+        font-size: 21px;
+      }
+
+      main {
+        display: block;
+      }
+
+      .menu__title {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      .menu__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 15px;
+        gap: 10px;
+        padding: 0 10px;
+      }
+
+      .menu__list li {
+        flex: 1 0 auto;
+        text-align: center;
+      }
+    }
+
+    @media (max-width:650px) {
+      .burger-menu {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      header,
+      footer {
+        padding: 15px;
+        font-size: 20px;
+      }
+
+      header {
+        display: flex;
+        column-gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header__title {
+        flex-grow: 1;
+      }
+
+      .burger-menu__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+      }
+
+      @media(max-width:450px) {
+        .football-cup {
+          float: none;
+          margin: 0 0 20px;
+          width: 100%;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <p class="header__title">привет участникам соревнований!</p>
+      <div class="burger-menu">
+        <a href="#" class="burger-menu__container burger-menu-button">
+          <!-- Можно еще сделать линии бургер меню через псевдоэлементы ::before и ::after -->
+          <span class="burger-menu__item"></span>
+          <span class="burger-menu__item"></span>
+          <span class="burger-menu__item"></span>
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="menu">
+        <p class="menu__title">Виды спорта:</p>
+        <ul class="menu__list">
+          <li><a href="https://google.com">конькобежный спорт</a></li>
+          <li><a href="https://google.com">футбол</a></li>
+          <li><a href="https://google.com">биатлон</a></li>
+          <li><a href="https://google.com">стрельба из лука</a></li>
+          <li><a href="https://google.com">прыжки в длину</a></li>
+          <li><a href="https://google.com">прыжки в высоту</a></li>
+          <li><a href="https://google.com">конькобежный спорт</a></li>
+          <li><a href="https://google.com">футбол</a></li>
+          <li><a href="https://google.com">биатлон</a></li>
+          <li><a href="https://google.com">стрельба из лука</a></li>
+        </ul>
+      </section>
+      <section class="content">
+        <h1>ФУТБОЛ</h1>
+        <div class="content-wrapper">
+          <img class="football-cup" src="img/football.jpg" alt="football-cup">
+          <div class="content__description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Tincidunt vitae semper quis lectus nulla at. Aliquet enim tortor at auctor urna. Donec
+              massa
+              sapien faucibus et molestie ac feugiat sed. Elementum nibh tellus molestie nunc non blandit massa enim.
+            </p>
+            <p>Aliquam sem et tortor consequat id porta nibh venenatis. Sapien pellentesque habitant morbi tristique
+              senectus
+              et netus et. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Nunc
+              eget
+              lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae. Id interdum velit laoreet id donec
+              ultrices
+              tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas pretium aenean.
+            </p>
+            <p>Aliquet enim tortor at auctor urna. Donec massa sapien faucibus et molestie ac feugiat sed. Elementum
+              nibh
+              tellus molestie nunc non blandit massa enim. Aliquam sem et tortor consequat id porta nibh venenatis.
+              Sapien
+              pellentesque habitant morbi tristique senectus et netus et. Lectus vestibulum mattis ullamcorper velit
+              sed
+              ullamcorper morbi tincidunt ornare. Nunc eget lorem dolor sed. In iaculis nunc sed augue lacus viverra
+              vitae.
+              Id interdum velit laoreet id donec ultrices tincidunt arcu non. Tellus cras adipiscing enim eu turpis
+              egestas
+              pretium aenean. Enim diam vulputate ut pharetra sit.Lectus vestibulum mattis ullamcorper velit sed
+              ullamcorper
+              morbi tincidunt ornare. Nunc eget
+              lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae. Id interdum velit laoreet id donec
+              ultrices
+              tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas pretium aenean.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quisquam dolor maxime laboriosam
+              adipisci
+              laborum officia deleniti possimus magnam voluptatum rem tempore nisi, illo quam aliquam labore explicabo
+              distinctio totam.
+              Magni illo commodi blanditiis vero aspernatur et consectetur ipsum ratione. Officiis doloremque vel
+              quibusdam sit odit vitae esse recusandae animi dolorem repudiandae assumenda quasi totam, quod delectus
+              veritatis tempore ipsum!
+              Ut error nostrum magni placeat quia suscipit minima cumque expedita ad unde molestiae a, sit voluptate
+              sunt id laborum dolorum deleniti repellat minus earum tenetur illum sed? Cum, qui nostrum.
+              Rem dolore rerum vero reiciendis accusantium odit, quibusdam facere maxime nesciunt in doloremque
+              sapiente, voluptatum officiis accusamus repellendus laudantium modi commodi officia molestiae labore
+              quam,
+              qui harum pariatur numquam. Sequi.
+              Impedit quis eos voluptatibus ad debitis tempora laborum deserunt quidem vitae hic magnam enim modi at
+              odio perspiciatis assumenda, quos possimus quae rerum, suscipit sit veniam aspernatur? Minima, quas
+              repellendus.
+            </p>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">главное не победа, а участие!</footer>
+  </div>
+</body>
+
+</html>

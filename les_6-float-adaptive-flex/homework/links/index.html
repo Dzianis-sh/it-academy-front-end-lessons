@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINKS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      line-height: 21px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    .container {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bottom-marg {
+      margin-bottom: 20px;
+    }
+
+    a {
+      padding: 5px 15px;
+      display: inline-block;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    .first-menu ul {
+      display: flex;
+      justify-content: cent;
+    }
+
+    .first-menu nav span {
+      color: red;
+    }
+
+    .second-menu nav li {
+      display: inline-block;
+      border-left: 2px solid red;
+      margin-left: -5px;
+    }
+
+    .second-menu nav li:first-child {
+      margin: 0;
+      border-left: none;
+    }
+
+    .third-menu li {
+      position: relative;
+      float: left;
+    }
+
+
+    .third-menu li::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: 0;
+      background-color: red;
+      height: 30px;
+      width: 2px;
+    }
+
+    .third-menu li:last-child::after {
+      display: none;
+    }
+
+    /* Можно в контент просто поместить вертикальный слеш, но не сможем регулировать высоту */
+    /* .third-menu li::after {
+      content: '|';
+      color: red;
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- Горизонтальное выравнивание через флекс (можно и через grid), через спан добавлен вертикальный слеш и окрашен в красный. Еще варик, можно вставить иконку Font Awesome или возможно картинкой через svg. Через флекс выравнивание удобно, нету лишних отступов, как через inline-block. Простой способ ввести разделитель через клавиатуру или через мнемонику, цвет поменять можно, а вот минус, что нельзя задавать высоту соответственно. -->
+  <div class="bottom-marg container first-menu">
+    <nav>
+      <ul>
+        <li><a href="#">Первая ссылка</a><span>|</span></li>
+        <li><a href="#">Вторая ссылка</a><span>|</span></li>
+        <li><a href="#">Третья ссылка</a><span>|</span></li>
+        <li><a href="#">Четвертая ссылка</a><span>|</span></li>
+        <li><a href="#">Пятая ссылка</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Через inline-block и разделитель через border-right. Через inline-block образуется небольштй отступ, который дополнительно нужно убрать, один из способом отрицательным margin и учитывать этот факт при верстке. Еще можно просто не писать, не закрывать тег </li> и тогда отступов не будет, но вроде это не совсем практично. Разделитель можно задать и через border, если не нужна конкретная высота, но в то же время и минус - зависит от паддинга и размера элемента. -->
+  <div class="bottom-marg container second-menu">
+    <nav>
+      <ul>
+        <li><a href="#">Первая ссылка</a></li>
+        <li><a href="#">Вторая ссылка</a></li>
+        <li><a href="#">Третья ссылка</a></li>
+        <li><a href="#">Четвертая ссылка</a></li>
+        <li><a href="#">Пятая ссылка</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Тут через флоат, вероятно уже никто не пользуется таким способом, поскольку есть флекс и грид, но вариант работает. Разделитель добавил через псевдоэлемент :after - думаю, что это хороший способ, потому что можно регулировать и положение, и размер разделителя (только заметил что отображается немного странно, одна получилась норм, другая чуть толще, хотя размер один и тот же) -->
+  <div class="bottom-marg container third-menu">
+    <nav>
+      <ul>
+        <li><a href="#">Первая ссылка</a></li>
+        <li><a href="#">Вторая ссылка</a></li>
+        <li><a href="#">Третья ссылка</a></li>
+        <li><a href="#">Четвертая ссылка</a></li>
+        <li><a href="#">Пятая ссылка</a></li>
+      </ul>
+      <div style="clear: both;"></div>
+    </nav>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMPLE PAGE</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+      line-height: 21px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .simple-page {
+      padding: 1rem;
+      box-shadow: 0 0 10px grey;
+      border: 1px solid rgb(166, 166, 166);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .simple-page__str-underl {
+      text-decoration: underline;
+    }
+
+    .simple-page__prs,
+    .simple-page__lists {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="simple-page">
+      <h1>О Курсе</h1>
+      <div class="simple-page__prs">
+        <p>С расширением выбора девайсов и браузеров возрастает потребность в <strong>гибких, адаптивных
+            пользовательских
+            интерфейсах</strong>
+          (никому ведь не хочется пользоваться сайтом, который отображается лишь наполовину).</p>
+        <p><span class="simple-page__str-underl">Именно над этим и трудится Front-end-разработчик</span>: от
+          адаптации и верстки дизайн-макетов до реализации сложной
+          логики взаимодействия с пользователями при разработке сайта.
+        </p>
+      </div>
+      <div class="simple-page__lists">
+        <h2>Технологии</h2>
+        <ul>
+          <li>Основные
+            <ul>
+              <li><a target="_blank"
+                  href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a>
+              </li>
+              <li><a target="_blank"
+                  href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS</a>
+              </li>
+              <li><a target="_blank" href="https://learn.javascript.ru">JS</a></li>
+            </ul>
+          </li>
+          <li>Дополнительные
+            <ul>
+              <li><a target="_blank" href="https://github.com">Git</a></li>
+              <li><a target="_blank" href="https://sass-lang.com">Scss</a></li>
+              <li><a target="_blank" href="https://getbootstrap.com">Bootstrap</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="simple-page__socials">
+        <a target="_blank" href="https://twitter.com">Twitter</a> &VerticalSeparator;
+        <a target="_blank" href="https://facebook.com">Facebook</a> &VerticalSeparator;
+        <a target="_blank" href="https://www.instagram.com">Instagram</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4d</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: justify;
+      line-height: 26px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e8e8e8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 65px auto 0;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #8cb4ff;
+    }
+
+    a:hover {
+      color: #669cff;
+      text-decoration: none;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    th,
+    td {
+      border: 1px solid grey;
+      padding: 15px 25px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    .a-button {
+      display: inline-block;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      background-color: #e3e3e3;
+      border: 1px solid rgb(190, 190, 190);
+      border-radius: 5px;
+      height: 35px;
+      line-height: 35px;
+    }
+
+    .a-button:hover {
+      color: #669cff;
+      background-color: #d1d1d1;
+      box-shadow: 0 0 15px lightgrey;
+    }
+
+    .table-ages {
+      border: 2px solid rgb(180, 180, 180);
+      max-width: 500px;
+      margin: 0 auto 20px;
+      font-size: 21px;
+    }
+
+    .table-ages th,
+    .table-ages td {
+      border: 1px solid rgb(177, 177, 177);
+    }
+
+    .table-ages th {
+      width: 50%;
+      border-bottom: 1px solid black;
+      background-color: #c1c1c1;
+    }
+
+    .table-ages td:first-child {
+      background-color: #dddddd;
+      font-weight: bold;
+      border-right: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>HTML Table basics</h1>
+    <a class="a-button" href="http://google.com" target="_blank">Overview: Tables</a>
+    <p>This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making
+      cells
+      span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
+    </p>
+    <table>
+      <tr>
+        <th>Prerequisites:</th>
+        <td>The basics of HTML (see <a href="http://google.com" target="_blank">Introduction to HTML</a>).</td>
+      </tr>
+      <tr>
+        <th>Objective:</th>
+        <td>To gain basic familiarity with HTML tables.</td>
+      </tr>
+    </table>
+    <h2>What is a table?</h2>
+    <p>
+      A table is a structured set of data made up of rows and columns (<strong>tabular data</strong>). A table allows
+      you to quickly and
+      easily look up values that indicate some kind of connection between different types of data, for example a person
+      and their age, or a day of the week, or the timetable for a local swimming pool.
+    </p>
+  </div>
+  <table class="table-ages">
+    <tr>
+      <th>Person</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Chris</td>
+      <td class="text-right">38</td>
+    </tr>
+    <tr>
+      <td>Dennis</td>
+      <td class=" text-right">45</td>
+    </tr>
+    <tr>
+      <td>Sarah</td>
+      <td class="text-right">29</td>
+    </tr>
+    <tr>
+      <td>Karen</td>
+      <td class="text-right">47</td>
+    </tr>
+  </table>
+</body>
+
+</html>

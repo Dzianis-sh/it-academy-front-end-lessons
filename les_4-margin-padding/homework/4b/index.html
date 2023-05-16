@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4b</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    table {
+      text-align: center;
+    }
+
+    caption {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    td,
+    th {
+      padding: 15px;
+    }
+
+    th {
+      width: 100px;
+      color: #fff;
+      background-color: #b0cee8;
+    }
+
+    td {
+      background-color: #d9e7f3;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .col-width {
+      width: 200px;
+    }
+
+    .mod-bg {
+      background-color: #b0cee8;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Я сделал 2 варианта этого задания. В этом варике я задал фикс ширину th - 100px, а первой колонке задал width 200px (1ому элементу). На реальных проектах норм практика ячейкам задавать так размеры? В devTools при сужении экрана, при фикс. ширине ячейки уменьшаются, я так понял, что тут чуть по-другому работает ширина? В index-v2 я стилизовал через <col>, задавал text-align: left;, но он не применялся (через <col>), остальные стили применялись. Как лучше? :) 
+  p.s. Будет супер, если на предстоящем занятии немного расскажешь про эти <col> -->
+  <div class="container">
+    <table>
+      <caption>Companies</caption>
+      <tr>
+        <th scope="col" class="text-left col-width">Company</th>
+        <th scope="col">Q1</th>
+        <th scope="col">Q2</th>
+        <th scope="col">Q3</th>
+        <th scope="col">Q4</th>
+      </tr>
+
+      <tr>
+        <td class="text-left mod-bg">Microsoft</td>
+        <td>20.3</td>
+        <td>30.5</td>
+        <td>23.5</td>
+        <td>40.3</td>
+      </tr>
+
+      <tr>
+        <td class="text-left mod-bg">Google</td>
+        <td>50.2</td>
+        <td>40.63</td>
+        <td>45.23</td>
+        <td>39.3</td>
+      </tr>
+
+      <tr>
+        <td class="text-left mod-bg">Apple</td>
+        <td>25.4</td>
+        <td>30.2</td>
+        <td>33.3</td>
+        <td>36.7</td>
+      </tr>
+
+      <tr>
+        <td class="text-left mod-bg">IBM</td>
+        <td>20.4</td>
+        <td>15.6</td>
+        <td>22.3</td>
+        <td>29.3</td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

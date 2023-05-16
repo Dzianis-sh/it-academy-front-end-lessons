@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4b-v2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    caption {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    th,
+    td {
+      padding: 15px;
+    }
+
+    th {
+      color: #fff;
+      background-color: #b0cee8;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    .first-col {
+      background-color: #b0cee8;
+      color: #fff;
+      width: 200px;
+    }
+
+    .span-col {
+      text-align: center;
+      width: 100px;
+      background-color: #d9e7f3;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .mod-bg {
+      color: #fff;
+      background-color: #b0cee8;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <colgroup>
+      <col class="first-col">
+      <col class="span-col" span="4">
+    </colgroup>
+
+    <caption>Companies</caption>
+    <tr>
+      <th scope="col" class="text-left">Company</th>
+      <th scope="col">Q1</th>
+      <th scope="col">Q2</th>
+      <th scope="col">Q3</th>
+      <th scope="col">Q4</th>
+    </tr>
+
+    <tr>
+      <td class="text-left mod-bg">Microsoft</td>
+      <td>20.3</td>
+      <td>30.5</td>
+      <td>23.5</td>
+      <td>40.3</td>
+    </tr>
+
+    <tr>
+      <td class="text-left mod-bg">Google</td>
+      <td>50.2</td>
+      <td>40.63</td>
+      <td>45.23</td>
+      <td>39.3</td>
+    </tr>
+
+    <tr>
+      <td class="text-left mod-bg">Apple</td>
+      <td>25.4</td>
+      <td>30.2</td>
+      <td>33.3</td>
+      <td>36.7</td>
+    </tr>
+
+    <tr>
+      <td class="text-left mod-bg">IBM</td>
+      <td>20.4</td>
+      <td>15.6</td>
+      <td>22.3</td>
+      <td>29.3</td>
+    </tr>
+  </table>
+</body>
+
+</html>

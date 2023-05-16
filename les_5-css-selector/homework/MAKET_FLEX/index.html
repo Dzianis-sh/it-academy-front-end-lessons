@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAKET_FLEX</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      text-align: justify;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header,
+    footer {
+      text-align: center;
+      color: blue;
+      background-color: rgb(87, 186, 225);
+      padding: 25px;
+      text-transform: uppercase;
+      font-size: 25px;
+      flex: 0 1 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      width: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      background: url('img/ball.png') top right repeat-y;
+    }
+
+    .menu {
+      padding: 15px;
+      background-color: antiquewhite;
+      flex: 0 1 250px;
+    }
+
+    .content {
+      padding: 15px;
+      flex: 1 1;
+    }
+
+    ul {
+      padding: 0 15px;
+    }
+
+    .menu__title {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .football-cup {
+      margin-right: 20px;
+      float: left;
+    }
+
+    .content__description p {
+      margin-bottom: 20px;
+    }
+
+    .content__description p:last-child {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">привет участникам соревнований!</header>
+    <main class="main">
+      <section class="menu">
+        <p class="menu__title">Виды спорта:</p>
+        <ul class="menu__list">
+          <li><a href="https://google.com">конькобежный спорт</a></li>
+          <li><a href="https://google.com">футбол</a></li>
+          <li><a href="https://google.com">биатлон</a></li>
+          <li><a href="https://google.com">стрельба из лука</a></li>
+          <li><a href="https://google.com">прыжки в длину</a></li>
+          <li><a href="https://google.com">прыжки в высоту</a></li>
+          <li><a href="https://google.com">конькобежный спорт</a></li>
+          <li><a href="https://google.com">футбол</a></li>
+          <li><a href="https://google.com">биатлон</a></li>
+          <li><a href="https://google.com">стрельба из лука</a></li>
+        </ul>
+      </section>
+      <section class="content">
+        <h1>ФУТБОЛ</h1>
+        <div class="content-wrapper">
+          <span class="football-cup">
+            <img src="img/football.jpg" alt="football-cup">
+          </span>
+          <div class="content__description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Tincidunt vitae semper quis lectus nulla at. Aliquet enim tortor at auctor urna. Donec massa
+              sapien faucibus et molestie ac feugiat sed. Elementum nibh tellus molestie nunc non blandit massa enim.
+            </p>
+            <p>Aliquam sem et tortor consequat id porta nibh venenatis. Sapien pellentesque habitant morbi tristique
+              senectus
+              et netus et. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Nunc eget
+              lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae. Id interdum velit laoreet id donec
+              ultrices
+              tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas pretium aenean.
+            </p>
+            <p>Aliquet enim tortor at auctor urna. Donec massa sapien faucibus et molestie ac feugiat sed. Elementum
+              nibh
+              tellus molestie nunc non blandit massa enim. Aliquam sem et tortor consequat id porta nibh venenatis.
+              Sapien
+              pellentesque habitant morbi tristique senectus et netus et. Lectus vestibulum mattis ullamcorper velit sed
+              ullamcorper morbi tincidunt ornare. Nunc eget lorem dolor sed. In iaculis nunc sed augue lacus viverra
+              vitae.
+              Id interdum velit laoreet id donec ultrices tincidunt arcu non. Tellus cras adipiscing enim eu turpis
+              egestas
+              pretium aenean. Enim diam vulputate ut pharetra sit.Lectus vestibulum mattis ullamcorper velit sed
+              ullamcorper
+              morbi tincidunt ornare. Nunc eget
+              lorem dolor sed. In iaculis nunc sed augue lacus viverra vitae. Id interdum velit laoreet id donec
+              ultrices
+              tincidunt arcu non. Tellus cras adipiscing enim eu turpis egestas pretium aenean.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quisquam dolor maxime laboriosam adipisci
+              laborum officia deleniti possimus magnam voluptatum rem tempore nisi, illo quam aliquam labore explicabo
+              distinctio totam.
+              Magni illo commodi blanditiis vero aspernatur et consectetur ipsum ratione. Officiis doloremque vel
+              quibusdam sit odit vitae esse recusandae animi dolorem repudiandae assumenda quasi totam, quod delectus
+              veritatis tempore ipsum!
+              Ut error nostrum magni placeat quia suscipit minima cumque expedita ad unde molestiae a, sit voluptate
+              sunt id laborum dolorum deleniti repellat minus earum tenetur illum sed? Cum, qui nostrum.
+              Rem dolore rerum vero reiciendis accusantium odit, quibusdam facere maxime nesciunt in doloremque
+              sapiente, voluptatum officiis accusamus repellendus laudantium modi commodi officia molestiae labore quam,
+              qui harum pariatur numquam. Sequi.
+              Impedit quis eos voluptatibus ad debitis tempora laborum deserunt quidem vitae hic magnam enim modi at
+              odio perspiciatis assumenda, quos possimus quae rerum, suscipit sit veniam aspernatur? Minima, quas
+              repellendus.
+            </p>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">главное не победа, а участие!</footer>
+  </div>
+</body>
+
+</html>
