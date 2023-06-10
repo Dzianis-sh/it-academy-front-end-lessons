@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson-15</title>
+</head>
+
+<body>
+
+  <h1>Сколько лет в году</h1>
+  <div><label for="year">Введите год</label></div>
+  <input type="number" id="year">
+  <button onClick="onBtnClick()">Посчитать</button>
+
+  <script>
+    function getDaysInYear(year) {
+
+      if (year % 4 === 0 || year % 100 !== 0) {
+        return 366;
+      } else if (year % 400 === 0) {
+        return 366;
+      }
+
+      return 365;
+    }
+
+    function onBtnClick() {
+      let input = document.querySelector('#year');
+      let days = getDaysInYear(input.value);
+      alert(`В ${input.value} году ${days} дней`);
+    }
+  </script>
+</body>
+
+</html>

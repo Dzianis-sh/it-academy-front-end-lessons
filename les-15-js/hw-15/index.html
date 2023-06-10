@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hw-15</title>
+</head>
+
+<body>
+  <!-- survey -->
+  <h1>Опрос</h1>
+  <form class="form">
+    <div><label>Фамилия&nbsp;<input required name="lastname"></label></div><br>
+    <div><label>Имя&nbsp;<input required name="firstname"></label></div><br>
+    <div><label>Отчество&nbsp;<input required name="midname"></label></div><br>
+    <div><label>Возраст в годах&nbsp;<input required type="number" min="0" max="150" name="age"></label></div>
+    <br>
+
+    <div>
+      Пол
+      <br>
+      <div><label><input required type="radio" name="gender" value="male">Мужской</label></div>
+      <div><label><input required type="radio" name="gender" value="female">Женский</label></div>
+    </div>
+    <br>
+
+    <div>
+      <div><input type="submit" value="Отправить"></div>
+    </div>
+  </form>
+
+  <script>
+    document.querySelector('.form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      let form = document.querySelector('.form');
+
+      let lastname = form.querySelector('input[name="lastname"]').value;
+      let firstname = form.querySelector('input[name="firstname"]').value;
+      let midname = form.querySelector('input[name="midname"]').value;
+      let age = form.querySelector('input[name="age"]').value;
+      const retiredAgeMen = 63;
+      const retiredAgeWomen = 58;
+
+
+      let ageInYear = age * 365;
+      let ageInFiveYear = age + 5;
+
+      let gender;
+      let selectedRadio = form.querySelector('input[name="gender"]:checked');
+      gender = selectedRadio ? selectedRadio.value : false;
+
+      let genderLabel;
+      genderLabel = gender === 'male' ? 'Мужской' : 'Женский';
+
+      let isRetired = genderLabel === 'Мужской' && age >= retiredAgeMen || genderLabel === 'Женский' && age >= retiredAgeWomen ? 'Да' : 'Нет';
+
+      alert(`
+       Ваше ФИО: ${lastname} ${firstname} ${midname}
+       Ваш возраст в годах: ${age}
+       Ваш возраст в днях: ${ageInYear}
+       Через 5 лет вам будет ${ageInFiveYear}
+       Ваш пол: ${genderLabel}
+       Вы на пенсии: ${isRetired}
+       `);
+    });
+  </script>
+</body>
+
+</html>
