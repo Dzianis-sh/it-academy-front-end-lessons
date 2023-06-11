@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO list</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    body {
+      font-family: sans-serif;
+      color: #343434;
+      background-color: #cecece;
+    }
+
+    button,
+    input {
+      border: 0;
+    }
+
+    .todo {
+      background-color: #ebebeb;
+      max-width: 700px;
+      min-height: 400px;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      row-gap: 30px;
+      padding: 10px 15px;
+      box-shadow: 0px 5px 10px rgb(176, 176, 176);
+    }
+
+    .todo__title {
+      text-align: center;
+    }
+
+    .todo__btn {
+      background-image: linear-gradient(to right, #304352 0%, #d7d2cc 51%, #304352 100%);
+      padding: 10px 30px;
+      text-transform: uppercase;
+      transition: 0.3s;
+      cursor: pointer;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0px 0px 3px #919191;
+      border-radius: 5px;
+    }
+
+    .todo__btn:hover {
+      background-position: right center;
+      color: #fff;
+    }
+
+    .todo__btn:active {
+      transition: .2s;
+      background-image: linear-gradient(to right, #456075 0%, #e6dccf 51%, #3d5b71 100%);
+    }
+
+    .todo__controls {
+      column-gap: 20px;
+      padding: 10px 0;
+      border-bottom: 1px solid #d7d7d7;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .todo__input {
+      background: rgb(255, 255, 255);
+      transition: box-shadow .2s ease-in;
+      border-radius: 5px;
+      color: #666666;
+      width: 100%;
+      padding: 10px 20px;
+    }
+
+    .todo__input:focus {
+      outline: 1px solid rgb(200, 200, 200);
+      box-shadow: 0px 0px 5px #c3c3c3;
+    }
+
+    .todo__input::placeholder {
+      color: #b7b7b7;
+    }
+
+    .todo__list ul {
+      color: #343434;
+      display: flex;
+      font-size: 14px;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    .selected-item {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="todo">
+    <div class="todo__title">
+      <h1>TODO List</h1>
+    </div>
+    <div class="todo__controls">
+      <input class="todo__input" name="name" placeholder="...type here" type="text">
+      <button class="todo__btn" type="button">Добавить</button>
+      <button class="todo__btn todo__btn-remove" type="button">Удалить</button>
+    </div>
+    <div class="todo__list">
+      <ul>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    let btn = document.querySelector('.todo__btn');
+
+    btn.addEventListener('click', function () {
+      let input = document.querySelector('.todo__input');
+      let inputValue = input.value.trim();
+
+      if (!inputValue) {
+        input.focus();
+        return;
+      }
+
+      input.value = '';
+
+      let ul = document.querySelector('.todo__list ul');
+      // ul.innerHTML += `<li>${inputValue}</li>`;
+
+      let newItem = document.createElement('li');
+      newItem.textContent = inputValue;
+
+      newItem.addEventListener('click', function () {
+        let allItems = ul.querySelectorAll('li');
+        allItems.forEach(function (item) {
+          item.classList.remove('selected-item');
+        });
+        newItem.classList.add('selected-item');
+      });
+
+
+      // newItem.addEventListener('dblclick', function () {
+      //   if (confirm(`Удалить: ${inputValue}`)) {
+      //     newItem.remove();
+      //   }
+      // });
+
+      let btnRemove = document.querySelector('.todo__btn-remove');
+
+      btnRemove.addEventListener('click', function () {
+        if (newItem.classList.contains('selected-item')) {
+          newItem.remove();
+        }
+      });
+
+      ul.appendChild(newItem);
+
+    });
+  </script>
+
+</body>
+
+</html>
