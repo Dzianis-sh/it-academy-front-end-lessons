@@ -150,7 +150,6 @@
         newItem.classList.add('selected-item');
       });
 
-
       // newItem.addEventListener('dblclick', function () {
       //   if (confirm(`Удалить: ${inputValue}`)) {
       //     newItem.remove();
@@ -158,10 +157,9 @@
       // });
 
       let btnRemove = document.querySelector('.todo__btn-remove');
-
       btnRemove.addEventListener('click', function () {
-        if (newItem.classList.contains('selected-item')) {
-          newItem.remove();
+        if (ul.querySelector('.selected-item')) {
+          ul.querySelector('.selected-item').remove();
         }
       });
 
