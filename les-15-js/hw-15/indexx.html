@@ -99,8 +99,21 @@
       row-gap: 10px;
     }
 
+    .todo__list li {
+      display: flex;
+      column-gap: 10px;
+    }
+
     .selected-item {
-      text-decoration: line-through;
+      color: #4d7cff;
+    }
+
+    .todo__list button {
+      cursor: pointer;
+      background-color: transparent;
+      padding: 0;
+      color: #3d5b71;
+
     }
   </style>
 </head>
@@ -124,6 +137,7 @@
 
   <script>
     let btn = document.querySelector('.todo__btn');
+    let deleteIcon = '&#10008';
 
     btn.addEventListener('click', function () {
       let input = document.querySelector('.todo__input');
@@ -137,10 +151,18 @@
       input.value = '';
 
       let ul = document.querySelector('.todo__list ul');
-      // ul.innerHTML += `<li>${inputValue}</li>`;
-
       let newItem = document.createElement('li');
-      newItem.textContent = inputValue;
+
+      //alternate add value. 
+      // ul.innerHTML += `<li>${inputValue}</li>`;      
+
+      let span = document.createElement('span');
+      span.textContent = inputValue;
+      newItem.appendChild(span);
+
+      let itemDelete = document.createElement('button');
+      itemDelete.innerHTML = deleteIcon;
+      newItem.appendChild(itemDelete);
 
       newItem.addEventListener('click', function () {
         let allItems = ul.querySelectorAll('li');
@@ -150,11 +172,8 @@
         newItem.classList.add('selected-item');
       });
 
-      // newItem.addEventListener('dblclick', function () {
-      //   if (confirm(`Удалить: ${inputValue}`)) {
-      //     newItem.remove();
-      //   }
-      // });
+
+      ul.appendChild(newItem);
 
       let btnRemove = document.querySelector('.todo__btn-remove');
       btnRemove.addEventListener('click', function () {
@@ -163,8 +182,16 @@
         }
       });
 
-      ul.appendChild(newItem);
+      itemDelete.addEventListener('click', function () {
+        newItem.remove();
+      });
 
+      // delete newItem (<li>) by double clicking 
+      // newItem.addEventListener('dblclick', function () {
+      //   if (confirm(`Удалить: ${inputValue}`)) {
+      //     newItem.remove();
+      //   }
+      // });
     });
   </script>
 
