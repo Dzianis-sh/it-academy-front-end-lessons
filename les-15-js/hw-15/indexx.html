@@ -45,7 +45,7 @@
 
     .todo__btn {
       background-image: linear-gradient(to right, #304352 0%, #d7d2cc 51%, #304352 100%);
-      padding: 10px 30px;
+      padding: 10px 25px;
       text-transform: uppercase;
       transition: 0.3s;
       cursor: pointer;
@@ -126,8 +126,8 @@
     </div>
     <div class="todo__controls">
       <input class="todo__input" name="name" placeholder="...type here" type="text">
-      <button class="todo__btn" type="button">Добавить</button>
-      <button class="todo__btn todo__btn-remove" type="button">Удалить</button>
+      <button class="todo__btn" type="button">Add</button>
+      <button class="todo__btn todo__btn-remove" type="button">Clear List</button>
     </div>
     <div class="todo__list">
       <ul>
@@ -172,14 +172,15 @@
         newItem.classList.add('selected-item');
       });
 
-
       ul.appendChild(newItem);
 
       let btnRemove = document.querySelector('.todo__btn-remove');
       btnRemove.addEventListener('click', function () {
-        if (ul.querySelector('.selected-item')) {
-          ul.querySelector('.selected-item').remove();
-        }
+        // this case to delete ..1.. elem by clicking on the button 'Clear'
+        // if (ul.querySelector('.selected-item')) {
+        //   ul.querySelector('.selected-item').remove();
+        // }  
+        newItem.remove();
       });
 
       itemDelete.addEventListener('click', function () {
